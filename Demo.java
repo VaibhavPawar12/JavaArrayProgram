@@ -1,36 +1,23 @@
 public class Demo {
-    // static void swapping( int arr[]) {
-    //     int temp = arr[arr.length-1];
-    //     for(int i = arr.length-1; i>0; i--){
-    //         arr[i]=arr[i-1];
-    //      }
-    //      arr[0] = temp;
-    // }
-    static void display(int arr[]){
-        for(int i = 0; i<arr.length; i++){
-            System.out.println(arr[i]);
-        }
-        System.out.println();
-    }
 
-    public static void digitfun(int arr[])
-    {
-        for (int i=0;i<arr.length;i++)
-        {
-            int temp=arr[i];
-            while(temp>=10)
-            {
-                temp=temp/10;
-            }
-            arr[i]=temp;
+    static void ReplaceFirstLast(int A[]){
+        for(int i = 0; i<A.length; i++){
+            //Calculate Multipler
+            int y = (int)Math.log10(A[i]);
+            int multipler = (int)Math.pow(10,y);
+            A[i] = A[i] % multipler * 10 + A[i] / multipler;
         }
     }
 
-     public static void main(String[] args){
-         int arr[] = {123,235,6754,3257,64,2367,288,35,645,374};
-         display(arr);
-         digitfun(arr);
-         display(arr);
-         
-     }
+    static void display(int A[]){
+        for(int x:A){
+            System.out.println(x);
+        }
+    }
+
+    public static void main(String[] args) {
+        int A[] = {123,235,6754,3257,64,2367,288,35,645,374};
+        ReplaceFirstLast(A);
+        display(A);
+    }
 }

@@ -14,9 +14,20 @@ public class ReplaceFirstLast {
                
         }    
     }
-    /*static void display(int A[]){
+
+    //Shortcut method
+    /*static void ReplaceFirstLast(int A[]){
         for(int i = 0; i<A.length; i++){
-            System.out.println(A[i]);
+            //Calculate Multipler
+            int y = (int)Math.log10(A[i]);
+            int multipler = (int)Math.pow(10,y);
+            A[i] = A[i] % multipler * 10 + A[i] / multipler;
+        }
+    }
+
+    static void display(int A[]){
+        for(int x:A){
+            System.out.println(x);
         }
     }*/
 

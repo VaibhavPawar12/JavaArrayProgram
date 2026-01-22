@@ -1,0 +1,37 @@
+public class SumofDigits {
+    static void DigitSum(int A[]){
+        for(int i = 0; i<A.length; i++){
+            int num = A[i];
+            int sum=0;
+            int cnt = 0;
+
+            
+            
+            while(num>0){
+                int last = num % 10;
+                sum+=last;
+                num=num/10;
+                cnt++;
+                
+            }
+            int temp = sum;
+            int cnt1 = 0;
+            while(temp!=0){
+                temp = temp/10;
+                cnt1++;
+            }
+
+            int res = (int)Math.pow(10,cnt1);
+
+            A[i] = A[i] * res + sum;
+            /*int avg = sum/cnt;
+            A[i] = avg;*/
+            System.out.println(A[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        int A[] = {123,235,6754,3257,64,2367,288,35,645,374};
+        DigitSum(A);
+    }
+}
