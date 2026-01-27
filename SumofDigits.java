@@ -14,7 +14,7 @@ public class SumofDigits {
                 cnt++;
                 
             }
-            int temp = sum;
+            /*int temp = sum;
             int cnt1 = 0;
             while(temp!=0){
                 temp = temp/10;
@@ -23,9 +23,9 @@ public class SumofDigits {
 
             int res = (int)Math.pow(10,cnt1);
 
-            A[i] = A[i] * res + sum;
-            /*int avg = sum/cnt;
-            A[i] = avg;*/
+            A[i] = A[i] * res + sum;*/
+            int avg = sum/cnt;
+            A[i] = avg;
             System.out.println(A[i]);
         }
     }
